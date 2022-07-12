@@ -1,0 +1,6 @@
+{
+  "global": 0,
+  "aroundUser": 1,
+  "friends": 2,
+  "onlyMe": 3
+}

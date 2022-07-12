@@ -1,0 +1,9 @@
+{
+  "Epic": 0,
+  "GOG": 1,
+  "Steam": 2,
+  "Xbox": 3,
+  "PlayStation": 4,
+  "Nintendo": 5,
+  "None": 6
+}
