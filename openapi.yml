@@ -8,139 +8,140 @@ servers:
 paths:
   /leaderboard/{area}_Stage_{stage-id}_{direction}_{weather}_{group}/{filter-id}/{platform}/{user-id}/{friends}:
     get:
+      summary: Retrieve leaderboard data
       responses:
         200:
           description: Ok
-      parameters:
-        - name: area
-          required: true
-          in: query
-          schema:
-            type: string
-            enum:
-              - Finland
-              - Sardinia
-              - Japan
-              - Norway
-              - Germany
-              - Kenya
-        - name: stage-id
-          required: true
-          in: query
-          schema:
-            type: integer
-          examples:
-            stage_1:
-              value: 1
-            stage_2:
-              value: 2
-            stage_3:
-              value: 3
-            stage_4:
-              value: 4
-            stage_5:
-              value: 5
-            stage_6:
-              value: 6
-        - name: direction
-          required: true
-          in: query
-          schema:
-            type: string
-          examples:
-            forward:
-              value: Forward
-            reverse:
-              value: Reverse
-        - name: weather
-          required: true
-          in: query
-          schema:
-            type: string
-          examples:
-            rain:
-              value: Wet
-            snow:
-              value: Wet
-            dry:
-              value: Dry
-        - name: group
-          required: true
-          in: query
-          schema:
-            type: string
-          examples:
-            group_2:
-              value: 60s
-            group_3:
-              value: 70s
-            group_4:
-              value: 80s
-            group_b:
-              value: GroupB
-            group_s:
-              value: GroupS
-            group_a:
-              value: GroupA
-            vans:
-              value: Bonus_Vans
-            tri_wheelers:
-              value: Bonus_Monkey
-            trucks:
-              value: Bonus_Dakar
-            logging:
-              value: Bonus_Logging
-        - name: filter-id
-          required: true
-          in: query
-          schema:
-            type: integer
-          examples:
-            top:
-              value: 0
-            around_me:
-              value: 1
-            global:
-              value: 2
-            count:
-              value: 3
-            player_rank:
-              value: 4
-            number_one:
-              value: 5
-            friends:
-              value: 6
-            only_me:
-              value: 7
-        - name: platform
-          required: true
-          in: query
-          schema:
-            type: integer
-          examples:
-            all:
-              value: 6
-            standard:
-              value: 2
-            switch:
-              value: 5
-            epic:
-              value: 0
-            gog:
-              value: 1
-            steam:
-              value: 2
-            xbox:
-              value: 3
-            play_station:
-              value: 4
-        - name: user-id
-          required: false
-          in: query
-          schema:
-            type: integer
-        - name: friends
-          required: false
-          in: query
-          schema:
-            type: integer
+    parameters:
+      - name: area
+        required: true
+        in: query
+        schema:
+          type: string
+          enum:
+            - Finland
+            - Sardinia
+            - Japan
+            - Norway
+            - Germany
+            - Kenya
+      - name: stage-id
+        required: true
+        in: query
+        schema:
+          type: integer
+        examples:
+          stage_1:
+            value: 1
+          stage_2:
+            value: 2
+          stage_3:
+            value: 3
+          stage_4:
+            value: 4
+          stage_5:
+            value: 5
+          stage_6:
+            value: 6
+      - name: direction
+        required: true
+        in: query
+        schema:
+          type: string
+        examples:
+          forward:
+            value: Forward
+          reverse:
+            value: Reverse
+      - name: weather
+        required: true
+        in: query
+        schema:
+          type: string
+        examples:
+          rain:
+            value: Wet
+          snow:
+            value: Wet
+          dry:
+            value: Dry
+      - name: group
+        required: true
+        in: query
+        schema:
+          type: string
+        examples:
+          group_2:
+            value: 60s
+          group_3:
+            value: 70s
+          group_4:
+            value: 80s
+          group_b:
+            value: GroupB
+          group_s:
+            value: GroupS
+          group_a:
+            value: GroupA
+          vans:
+            value: Bonus_Vans
+          tri_wheelers:
+            value: Bonus_Monkey
+          trucks:
+            value: Bonus_Dakar
+          logging:
+            value: Bonus_Logging
+      - name: filter-id
+        required: true
+        in: query
+        schema:
+          type: integer
+        examples:
+          top:
+            value: 0
+          around_me:
+            value: 1
+          global:
+            value: 2
+          count:
+            value: 3
+          player_rank:
+            value: 4
+          number_one:
+            value: 5
+          friends:
+            value: 6
+          only_me:
+            value: 7
+      - name: platform
+        required: true
+        in: query
+        schema:
+          type: integer
+        examples:
+          all:
+            value: 6
+          standard:
+            value: 2
+          switch:
+            value: 5
+          epic:
+            value: 0
+          gog:
+            value: 1
+          steam:
+            value: 2
+          xbox:
+            value: 3
+          play_station:
+            value: 4
+      - name: user-id
+        required: false
+        in: query
+        schema:
+          type: integer
+      - name: friends
+        required: false
+        in: query
+        schema:
+          type: integer
