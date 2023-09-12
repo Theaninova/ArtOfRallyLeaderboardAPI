@@ -3,7 +3,7 @@ info:
   title: Art of Rally Leaderboard API
   version: 0.2.1
 servers:
-  - url: https://www.funselectorfun.com/artofrally
+  - url: https://www.funselektorfun.com/artofrally
     description: Official Leaderboard Server
 paths:
   /leaderboard/{area}_Stage_{stage}_{direction}_{weather}_{group}/{filter}/{platform}/{user}/{friends}:
